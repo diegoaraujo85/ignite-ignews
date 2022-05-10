@@ -9,12 +9,17 @@ type AppProps<P = any> = {
 
 import "../styles/global.scss";
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({
+  Component,
+  pageProps,
+  err,
+}: AppProps & { err: any }): JSX.Element {
+  // Workaround for https://github.com/vercel/next.js/issues/8592
   return (
     <NextAuthProvider session={pageProps.session}>
       <>
         <Header />
-        <Component {...pageProps} />
+        <Component {...pageProps} err={err} />
       </>
     </NextAuthProvider>
   );

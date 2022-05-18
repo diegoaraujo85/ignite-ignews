@@ -28,6 +28,8 @@
     "prettier"
   ],
   "rules": {
+    // turn on errors for missing imports
+    "import/no-unresolved": "error",
     "react/prefer-stateless-function": "off",
     "prettier/prettier": "error",
     "react-hooks/rules-of-hooks": "error",
@@ -51,8 +53,13 @@
     ]
   },
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
-      "typescript": {}
+      "typescript": {
+        "alwaysTryTypes": true, // always try to resolve types under `<root>@types` directory even it doesn't contain any source code, like `@types/unist`
+      }
     }
   }
 }

@@ -9,12 +9,12 @@ export function SubscribeButton() {
   const router = useRouter();
 
   async function handleSubscribe() {
-    if(!session){
+    if (!session) {
       signIn('github');
       return;
     }
 
-    if(session.activeSubscription) {
+    if (session.activeSubscription) {
       router.push('/posts');
       return;
     }
@@ -27,12 +27,11 @@ export function SubscribeButton() {
       const stripe = await getStripeJs();
 
       await stripe.redirectToCheckout({
-        sessionId
+        sessionId,
       });
-    } catch(err) {
+    } catch (err) {
       alert(err.message);
     }
-
   }
 
   return (

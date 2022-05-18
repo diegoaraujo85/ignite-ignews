@@ -21,7 +21,7 @@ export default NextAuth({
               q.Match(
                 q.Index('subscription_by_user_ref'),
                 q.Select(
-                  "ref",
+                  'ref',
                   q.Get(
                     q.Match(
                       q.Index('user_by_email'),
@@ -32,12 +32,12 @@ export default NextAuth({
               ),
               q.Match(
                 q.Index('subscription_by_status'),
-                "active"
+                'active'
               )
             ])
           )
         )
-  
+
         return {
           ...session,
           activeSubscription: userActiveSubscription

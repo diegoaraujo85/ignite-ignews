@@ -5,27 +5,24 @@ jest.mock('next/router', () => {
   return {
     useRouter() {
       return {
-        asPath: '/'
-      }
-    }
-  }
-})
+        asPath: '/',
+      };
+    },
+  };
+});
 jest.mock('next-auth/client', () => {
   return {
     useSession() {
-      return [null, false]
-    }
-  }
-})
+      return [null, false];
+    },
+  };
+});
 
 describe('Header component', () => {
   it('renders correctly', () => {
-    render(
-      <Header />
-    )
-  
-    expect(screen.getByText('Home')).toBeInTheDocument()
-    expect(screen.getByText('Posts')).toBeInTheDocument()
-  })
-})
+    render(<Header />);
 
+    expect(screen.getByText('Home')).toBeInTheDocument();
+    expect(screen.getByText('Posts')).toBeInTheDocument();
+  });
+});

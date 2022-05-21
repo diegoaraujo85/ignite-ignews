@@ -16,7 +16,7 @@
 
 ---
 
-<p align="center"> Project using nextJs
+<p align="center"> NextJs Project
     <br>
 </p>
 
@@ -30,7 +30,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Write about 1-2 paragraphs describing the purpose of your project.
+Project develop during [Rocketseat](https://rocketseat.com.br/) ignite course
 
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
@@ -43,12 +43,12 @@ yarn dev
 
 ## Techs  <a name = "techs"></a>
 
-- ReactJs
-- typescript
-- sass
-- axios
-- next
-- next-auth
-- stripe
-- faunaDB
-- [prismic](prismic.io)
+- [ReactJs](https://reactjs.org)
+- [typescript](https://www.typescriptlang.org)
+- [sass](https://sass-lang.com)
+- [axios](https://axios-http.com)
+- [next.js](https://nextjs.org)
+- [next-auth](https://next-auth.js.org)
+- [stripe](https://stripe.com)
+- [faunaDB](https://fauna.com)
+- [prismic](https://prismic.io)
